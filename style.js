@@ -1,9 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("loader");
-  const progressText = document.getElementById("progress-text");
-  let percent = 0;
+  const params = new URLSearchParams(window.location.search);
+  const skipLoader = params.get("skipLoader") === "true";
 
-  // Compteur de chargement (100% en 4s → 2.5% chaque 100ms)
+  const loader = document.getElementById("loader");
+  const sommaire = document.getElementById("sommaire");
+  const progressText = document.getElementById("progress-text");
+
+  if (skipLoader) {
+    loader.style.display = "none";
+    sommaire.style.display = "block";
+    return;
+  }
+
+  let percent = 0;
   const interval = setInterval(() => {
     percent += 2.5;
     if (progressText) {
@@ -12,16 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (percent >= 100) clearInterval(interval);
   }, 100);
 
-  // Disparition du loader après 4 secondes
   setTimeout(() => {
     loader.style.transition = "opacity 0.5s ease";
     loader.style.opacity = "0";
 
     setTimeout(() => {
       loader.style.display = "none";
+      sommaire.style.display = "block";
     }, 500);
   }, 4000);
 });
+
 
 // Menu déroulant
 function toggleDropdown(id) {
@@ -60,7 +70,7 @@ let mouseX = 0;
 let mouseY = 0;
 
 document.addEventListener("mousemove", (e) => {
-  mouseX = (e.clientX / window.innerWidth - 0.5) * 2; // plage -1 à 1
+  mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
   mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
 });
 
@@ -71,11 +81,9 @@ function animateStars() {
   ctx.shadowColor = "#ffcc00";
 
   for (let star of stars) {
-    // effet plus doux selon la souris
-    star.x += mouseX * star.speed * 2; // ← réduit de 5 à 2
+    star.x += mouseX * star.speed * 2;
     star.y += star.speed + mouseY * star.speed * 2;
 
-    // reboucler les étoiles
     if (star.y > canvas.height) {
       star.y = 0;
       star.x = Math.random() * canvas.width;

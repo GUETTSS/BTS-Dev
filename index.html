@@ -6,6 +6,9 @@
   <title>IMAD - Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body { background-color: black; }
+  </style>
 </head>
 <body>
 
@@ -20,24 +23,19 @@
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="main-header">
-    <h1 class="arcade-blink">IMAD - PORTFOLIO</h1>
+  <!-- Sommaire (caché au début) -->
+  <div id="sommaire" style="display: none;">
+    <header class="main-header">
+      <h1 class="arcade-blink">SOMMAIRE</h1>
+    </header>
     <input type="text" placeholder="Rechercher un élément..." class="search-bar" />
-  </header>
+    <div class="nav-buttons">
+      <a href="tp.html"><button>MES TP</button></a>
+      <a href="missions.html"><button>MES MISSIONS</button></a>
+      <a href="certification.html"><button>MES CERTIFICATIONS</button></a>
+    </div>
+  </div>
 
-  <!-- Navigation -->
-<div class="nav-buttons">
-  <a href="tp.html"><button>MES TP</button></a>
-  <a href="missions.html"><button>MES MISSIONS</button></a>
-  <a href="certification.html"><button>MES CERTIFICATIONS</button></a>
-</div>
-
-  <!-- Footer -->
-   
-
-  <!-- Script -->
   <script src="style.js"></script>
 </body>
 </html>
-
