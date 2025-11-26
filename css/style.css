@@ -242,20 +242,27 @@ footer {
   position: absolute;
   top: 25px;
   left: 25px;
-  font-size: 1.2em; /* ✅ taille réduite et adaptée */
+  font-size: 3em; /* ✅ flèche plus grande */
   color: #a020f0;
   font-family: 'Press Start 2P', cursive;
   text-decoration: none;
   z-index: 1000;
-  animation: blink 1s infinite;
-  transition: transform 0.2s ease;
-  text-shadow: 0 0 6px #a020f0, 0 0 12px #a020f0;
+  transition: transform 0.2s ease, color 0.2s ease;
+  text-shadow: 0 0 8px #a020f0, 0 0 16px #a020f0;
 }
 
+/* Effet au survol */
 .back-arrow:hover {
   transform: scale(1.2) rotate(-5deg);
   color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  text-shadow: 0 0 12px #fff, 0 0 24px #fff;
+}
+
+/* Effet au clic */
+.back-arrow:active {
+  color: #fff; /* ✅ devient blanc quand on clique */
+  text-shadow: 0 0 14px #fff, 0 0 28px #fff;
+  transform: scale(1.1);
 }
 
 
@@ -304,3 +311,30 @@ footer {
   text-align: center;
   box-shadow: 0 0 10px #a020f0;
 }
+
+.modules-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.module-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.9em;
+}
+
+.module-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
