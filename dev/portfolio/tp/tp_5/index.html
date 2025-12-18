@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulaire d'inscription</title>
+  <style>
+    /* Page */
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;      /* centre vertical */
+      justify-content: center;  /* centre horizontal */
+    }
+
+    /* Wrapper centré et compact */
+    .wrapper {
+      width: 420px;                 /* plus petit */
+      margin: 24px;
+    }
+
+    /* Titre bien centré */
+    h1 {
+      text-align: center;
+      color: #003366;
+      font-size: 22px;              /* plus petit */
+      margin: 0 0 14px;
+    }
+
+    /* Cadre/table compact au milieu */
+    .card {
+      width: 100%;
+      border: 2px solid #1e90ff;    /* bleu vif */
+      border-radius: 10px;
+      background-color: #e6f2ff;    /* bleu très clair */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      padding: 14px;                /* plus serré */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;        /* espace entre les lignes */
+    }
+
+    td {
+      vertical-align: middle;
+      padding: 0 6px;
+      font-size: 14px;              /* texte plus petit */
+      color: #10334d;
+    }
+
+    label {
+      display: inline-block;
+      min-width: 120px;             /* aligne les libellés */
+    }
+
+    input[type="text"],
+    input[type="password"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;                 /* plus compact */
+      font-size: 14px;
+      border: 1px solid #b5c9e3;
+      border-radius: 6px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    textarea { resize: vertical; }
+
+    /* Groupe radio/checkbox compact */
+    .inline-group > label {
+      margin-right: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+    }
+
+    /* Boutons plus petits et sur une ligne, centrés avec espace */
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;                    /* espace entre eux */
+      margin-top: 6px;
+    }
+
+    .btn {
+      background-color: #1e90ff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 14px;            /* plus petit et moins large */
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color .2s ease, transform .15s ease;
+    }
+
+    .btn:hover {
+      background-color: #003366;
+      transform: translateY(-1px);
+    }
+
+    /* Option: réduire encore sur mobile */
+    @media (max-width: 480px) {
+      .wrapper { width: 92vw; }
+      label { min-width: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Formulaire d'inscription</h1>
+    <div class="card">
+      <form>
+        <table>
+          <tr>
+            <td><label>Nom :</label></td>
+            <td><input type="text" name="t1" /></td>
+          </tr>
+          <tr>
+            <td><label>Prénom :</label></td>
+            <td><input type="text" name="t2" /></td>
+          </tr>
+          <tr>
+            <td><label>Mot de passe :</label></td>
+            <td><input type="password" name="t3" /></td>
+          </tr>
+          <tr>
+            <td><label>Adresse :</label></td>
+            <td><textarea rows="4"></textarea></td>
+          </tr>
+          <tr>
+            <td><label>Ville :</label></td>
+            <td>
+              <select>
+                <option>Paris</option>
+                <option>Creil</option>
+                <option>Nice</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Situation :</label></td>
+            <td class="inline-group">
+              <label><input type="radio" name="r1" /> Boursier</label>
+              <label><input type="radio" name="r1" /> Alternant</label>
+              <label><input type="radio" name="r1" /> Aucun</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Hobbies :</label></td>
+            <td class="inline-group">
+              <label><input type="checkbox" name="c1" /> Lecture</label>
+              <label><input type="checkbox" name="c2" /> Sport</label>
+              <label><input type="checkbox" name="c3" /> Musique</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div class="button-row">
+                <button type="button" class="btn">Enregistrer</button>
+                <input type="submit" value="Valider" class="btn" />
+                <input type="reset" value="Réinitialiser" class="btn" />
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
