@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulaire d'inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #003366;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    form {
+      width: 500px; /* élargi sur les côtés */
+      background-color: #ffffff;
+      border: 2px solid #1e90ff;
+      border-radius: 12px;
+      padding: 16px; /* hauteur compacte conservée */
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+      margin-top: 20px;
+      margin-bottom: 20px; /* espace sous le cadre */
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 5px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    input, textarea, select {
+      width: 95%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #003366;
+      transform: scale(1.05);
+    }
+
+    .sommaire-link {
+      margin-bottom: 20px; /* espace sous le lien */
+      text-align: center;
+    }
+
+    .sommaire-link a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px; /* plus gros */
+    }
+
+    .sommaire-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulaire D'inscription</h1>
+  <form>
+    <table>
+      <!-- tes champs inchangés -->
+      <tr><td><label for="l1">Pseudo *</label></td> <td><input type="text" name="t1"></td></tr>
+      <tr><td><label for="l2">Mot de passe</label></td> <td><input type="password" name="t2"></td></tr> 
+      <tr><td><label for="l3">Votre prénom</label></td> <td><input type="text" name="t3" placeholder="Votre prénom"></td></tr>
+      <tr><td><label for="l4">Email</label></td> <td><input type="text" name="t3"></td></tr> 
+      <tr><td><label for="l5">Avatar</label></td> <td><input type="file" name="t4"></td></tr> 
+      <tr><td><label for="l6">Mot de passe</label></td> <td><input type="text" name="t5"></td></tr> 
+      <tr><td><label for="l7">Pays</label></td> <td><select><option>France</option><option>Allemagne</option><option>Espagne</option><option>Suisse</option></select></td></tr> 
+      <tr><td><label for="l8">Fruits préférés</label></td> <td>Orange <input type="checkbox" name="c1"> Banane <input type="checkbox" name="c2"> Mangue <input type="checkbox" name="c3"></td></tr>
+      <tr><td><label for="l9">Civilité</label></td> <td>Homme <input type="radio" name="r1"> Femme <input type="radio" name="r1"></td></tr>
+      <tr><td><label for="l10">Ville</label></td> <td><input type="text" name="t3"></td></tr> 
+      <tr><td><label for="l11">Code postal</label></td> <td><input type="number" min="10000" max="99999" name="t3"></td></tr> 
+      <tr><td><label for="l12">Adresse</label></td> <td><textarea cols="25" rows="3"></textarea></td></tr>
+      <tr><td><label for="l13">Date de naissance</label></td> <td><input type="date" name="t3"></td></tr> 
+      <tr><td><label for="l14">Jauge</label></td> <td><input type="range" name="t3"></td></tr>
+      <tr><td><label for="l15">Téléphone</label></td> <td><input type="text" placeholder="+33" name="t3"></td></tr> 
+      <tr><td><label for="l16">Recherche</label></td> <td><input type="text" name="t3"></td></tr>
+      <tr><td><label for="l17">Url</label></td> <td><input type="text" placeholder="https://" name="t3"></td></tr>
+      <tr><td><label for="l18">Couleur préférée</label></td> <td><input type="color" name="t3"></td></tr>
+    </table>
+    <div class="button-container">
+      <button>Valider</button>
+    </div>
+  </form>
+  <div class="sommaire-link">
+    <a href="sommaire.html">Retour au sommaire</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* 🌙 Fond général plus doux */
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2f33; /* gris anthracite élégant */
+    color: #f0f0f0; /* texte clair pour contraste */
+}
+
+/* 🧢 En-tête modernisé */
+header {
+    background-color: #4a90e2; /* bleu doux */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* 🧭 Navigation plus lisible */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: #ffcc00; /* jaune doré lisible sur fond sombre */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* 📦 Section avec fond doux et ombre subtile */
+section {
+    padding: 24px;
+    margin: 20px auto;
+    width: 85%;
+    background-color: #3c3f41; /* gris foncé doux */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* 🖼️ Image bien intégrée */
+section img {
+    display: block;
+    margin: 16px auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* 🧱 Pied de page plus cohérent */
+footer {
+    text-align: center;
+    padding: 12px;
+    background-color: #23272a; /* gris très foncé */
+    color: #a0c4ff; /* bleu pastel */
+    font-size: 14px;
+}
+
+/* 🎯 Bouton stylisé et interactif */
+button {
+    width: 8em;
+    height: 2.5em;
+    background-color: #ffcc00; /* jaune doré */
+    border: 2px solid #e67e22; /* orange doux */
+    border-radius: 8px;
+    font-weight: bold;
+    color: #2c2f33;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffe680;
+    transform: scale(1.05);
+}
+
+/* 📐 Centrage des blocs */
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
