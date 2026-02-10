@@ -1,82 +1,362 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mes TP</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    body { background-color: black; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travaux Pratiques - Portfolio BTS SIO IMAD">
+  <title>Travaux Pratiques - IMAD Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/projects.css">
 </head>
 <body>
-
-  <!-- Flèche retour -->
-  <a href="index.html?skipLoader=true" class="back-arrow">🡐</a>
-
-  <!-- Titre -->
-  <header class="main-header">
-    <h1 class="arcade-blink">MES TP</h1>
-  </header>
-
-  <!-- Grille de cartes -->
-  <section class="card-grid">
-
-    <!-- TP 1 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/𝖃𝖀𝕽𝕺.jpeg" alt="TP1" />
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader__content">
+      <div class="loader__logo">IMAD</div>
+      <div class="loader__bar">
+        <div class="loader__progress"></div>
       </div>
-      <h3>TP 1</h3>
-      <a href="portfolio/tp/tp_1/index.html" class="card-button">ACCÉDER</a>
     </div>
+  </div>
 
-    <!-- TP 2 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/𝙁𝙧𝙞𝙚𝙣𝙙.jpeg" alt="TP2" />
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo"><span>IMAD</span></a>
+      <ul class="navbar__menu">
+        <li><a href="index.html" class="navbar__link">Accueil</a></li>
+        <li><a href="about.html" class="navbar__link">A propos</a></li>
+        <li><a href="skills.html" class="navbar__link">Competences</a></li>
+        <li><a href="projects.html" class="navbar__link active">Projets</a></li>
+        <li><a href="veille.html" class="navbar__link">Veille</a></li>
+        <li><a href="certifications.html" class="navbar__link">Certifications</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
+      <button class="navbar__toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <header class="page-header">
+      <div class="container">
+        <a href="projects.html" class="btn btn--ghost reveal" style="margin-bottom: var(--space-4);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Retour aux projets
+        </a>
+        <h1 class="page-header__title reveal">Travaux <span class="text-gradient">Pratiques</span></h1>
+        <p class="page-header__description reveal stagger-1">
+          Exercices realises durant ma formation BTS SIO - Apprentissage HTML, CSS et navigation web
+        </p>
       </div>
-      <h3>TP 2</h3>
-      <a href="tp/tpjs/index.html" class="card-button">ACCÉDER</a>
-    </div>
+    </header>
 
-    <!-- TP 3 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/║︎ black icons ║︎.jpeg" alt="TP3" />
+    <!-- Filter Bar -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="html">HTML</button>
+          <button class="filter-btn" data-filter="css">CSS</button>
+          <button class="filter-btn" data-filter="forms">Formulaires</button>
+        </div>
       </div>
-      <h3>TP 3</h3>
-      <a href="portfolio/tp/tp_3/index.html" class="card-button">ACCÉDER</a>
-    </div>
+    </section>
 
-    <!-- TP 4 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/𝐅𝐫𝐢𝐞𝐧𝐝.jpeg" alt="TP4" />
+    <!-- TP Cards Grid -->
+    <section class="projects-section">
+      <div class="container">
+        <div class="projects-grid">
+
+          <!-- TP 1 -->
+          <article class="project-card-interactive card-reveal reveal"
+                   data-category="html"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/image.png"
+                   data-title="TP 1 - Presentation BTS SIO"
+                   data-description="Page de presentation des specialites SLAM et SISR du BTS SIO avec tableaux et images."
+                   data-full-description="Creation d'une page HTML presentant les deux specialites du BTS SIO : SLAM (Solutions Logicielles et Applications Metiers) et SISR (Solutions d'Infrastructure, Systemes et Reseaux). Utilisation de tableaux HTML pour structurer les informations et integration d'images pour illustrer chaque specialite."
+                   data-technologies="HTML,Tableaux,Images"
+                   data-duration="2 heures"
+                   data-context="BTS SIO - 1ere annee"
+                   data-link="portfolio/tp/tp_1/index.html">
+            <div class="card-media">
+              <img src="portfolio/images/image.png" alt="TP 1 - Presentation BTS SIO" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #667eea, #764ba2)'">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge">HTML</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">TP 1 - Presentation BTS SIO</h3>
+              <p class="card-description">
+                Page de presentation des specialites SLAM et SISR du BTS SIO avec tableaux et images.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">HTML</span>
+                <span class="tag tag--pink">Tableaux</span>
+                <span class="tag">Images</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  2h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Formation
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TP 3 -->
+          <article class="project-card-interactive card-reveal reveal stagger-1"
+                   data-category="html"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/image copy.png"
+                   data-title="TP 3 - Navigation avec Frames"
+                   data-description="Site web avec navigation par iframes, sommaire et contenu dynamique."
+                   data-full-description="Realisation d'un site web multi-pages utilisant la technique des frames (iframes) pour creer une navigation dynamique. Le site comprend un sommaire permanent et une zone de contenu qui se met a jour sans recharger toute la page. Apprentissage de la structure de navigation web classique."
+                   data-technologies="HTML,Iframes,Navigation"
+                   data-duration="3 heures"
+                   data-context="BTS SIO - 1ere annee"
+                   data-link="portfolio/tp/tp_3/index.html">
+            <div class="card-media">
+              <img src="portfolio/images/image copy.png" alt="TP 3 - Frames" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #00BCF2, #0078D4)'">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge">HTML</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">TP 3 - Navigation avec Frames</h3>
+              <p class="card-description">
+                Site web avec navigation par iframes, sommaire et contenu dynamique.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">HTML</span>
+                <span class="tag tag--pink">Iframes</span>
+                <span class="tag">Navigation</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  3h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Formation
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TP 4 -->
+          <article class="project-card-interactive card-reveal reveal stagger-2"
+                   data-category="html"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/image copy 2.png"
+                   data-title="TP 4 - Presentation des Metiers"
+                   data-description="Site de presentation des metiers de l'informatique avec frames et sommaire interactif."
+                   data-full-description="Creation d'un site web complet presentant les differents metiers de l'informatique. Utilisation avancee des frames pour organiser le contenu avec un sommaire interactif permettant de naviguer entre les differentes fiches metiers. Chaque metier est presente avec ses missions, competences requises et perspectives d'evolution."
+                   data-technologies="HTML,Frames,Metiers IT"
+                   data-duration="4 heures"
+                   data-context="BTS SIO - 1ere annee"
+                   data-link="portfolio/tp/tp_4/index.html">
+            <div class="card-media">
+              <img src="portfolio/images/image copy 2.png" alt="TP 4 - Metiers" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #0078D4, #00BCF2)'">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge">HTML</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">TP 4 - Presentation des Metiers</h3>
+              <p class="card-description">
+                Site de presentation des metiers de l'informatique avec frames et sommaire interactif.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">HTML</span>
+                <span class="tag tag--pink">Frames</span>
+                <span class="tag">Metiers IT</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  4h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Formation
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TP 5 -->
+          <article class="project-card-interactive card-reveal reveal stagger-3"
+                   data-category="html,css,forms"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/image copy 3.png"
+                   data-title="TP 5 - Formulaire d'inscription"
+                   data-description="Formulaire complet avec tableaux, inputs, radio buttons, checkboxes et style CSS integre."
+                   data-full-description="Conception d'un formulaire d'inscription complet integrant tous les types de champs HTML : champs texte, mot de passe, boutons radio, cases a cocher, listes deroulantes et zones de texte. Mise en page avec tableaux HTML et premiers pas avec le CSS integre pour ameliorer le rendu visuel."
+                   data-technologies="HTML,CSS,Formulaire"
+                   data-duration="3 heures"
+                   data-context="BTS SIO - 1ere annee"
+                   data-link="portfolio/tp/tp_5/index.html">
+            <div class="card-media">
+              <img src="portfolio/images/image copy 3.png" alt="TP 5 - Formulaire" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #1e90ff, #003366)'">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge">HTML/CSS</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">TP 5 - Formulaire d'inscription</h3>
+              <p class="card-description">
+                Formulaire complet avec tableaux, inputs, radio buttons, checkboxes et style CSS integre.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">HTML</span>
+                <span class="tag tag--pink">CSS</span>
+                <span class="tag">Formulaire</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  3h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Formation
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TP 6 -->
+          <article class="project-card-interactive card-reveal reveal stagger-4"
+                   data-category="html,css,forms"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/image copy 4.png"
+                   data-title="TP 6 - Formulaire avec CSS externe"
+                   data-description="Formulaire d'inscription avec feuille de style CSS externe et mise en page soignee."
+                   data-full-description="Evolution du TP precedent avec l'introduction d'une feuille de style CSS externe. Apprentissage de la separation entre le contenu HTML et la presentation CSS. Mise en page amelioree du formulaire avec des styles personnalises pour les differents elements : couleurs, espacements, bordures et effets visuels."
+                   data-technologies="HTML,CSS externe,Formulaire"
+                   data-duration="3 heures"
+                   data-context="BTS SIO - 1ere annee"
+                   data-link="portfolio/tp/tp_6/index.html">
+            <div class="card-media">
+              <img src="portfolio/images/image copy 4.png" alt="TP 6 - Formulaire CSS" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #667eea, #764ba2)'">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge">CSS</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">TP 6 - Formulaire avec CSS externe</h3>
+              <p class="card-description">
+                Formulaire d'inscription avec feuille de style CSS externe et mise en page soignee.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">HTML</span>
+                <span class="tag tag--pink">CSS externe</span>
+                <span class="tag">Formulaire</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  3h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Formation
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </div>
-      <h3>TP 4</h3>
-      <a href="portfolio/tp/tp_4/index.html" class="card-button">ACCÉDER</a>
-    </div>
+    </section>
+  </main>
 
-    <!-- TP 5 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/♱.jpeg" alt="TP5" />
+  <!-- Card Modal -->
+  <div class="card-modal-overlay"></div>
+  <div class="card-modal">
+    <button class="card-modal__close" aria-label="Fermer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <img class="card-modal__image" src="" alt="Apercu du projet">
+    <div class="card-modal__body">
+      <span class="card-modal__category"></span>
+      <h2 class="card-modal__title"></h2>
+      <p class="card-modal__description"></p>
+      <div class="card-modal__meta"></div>
+      <div class="card-modal__tags"></div>
+      <div class="card-modal__cta"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo"><span>IMAD</span></div>
+          <p class="footer__description">Etudiant en BTS SIO passionne par le developpement web.</p>
+          <div class="social-links">
+            <a href="https://github.com/guettss" target="_blank" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__title">Navigation</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">A propos</a></li>
+            <li><a href="skills.html">Competences</a></li>
+            <li><a href="projects.html">Projets</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__title">Contact</h3>
+          <ul class="footer__links">
+            <li><a href="mailto:contact@example.com">Email</a></li>
+            <li><a href="https://github.com/guettss" target="_blank">GitHub</a></li>
+            <li><a href="contact.html">Formulaire</a></li>
+          </ul>
+        </div>
       </div>
-      <h3>TP 5</h3>
-      <a href="portfolio/tp/tp_5/index.html" class="card-button">ACCÉDER</a>
-    </div>
-
-    <!-- TP 6 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/Kamogawa Genji.jpeg" alt="TP6" />
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 IMAD Portfolio - Tous droits reserves</p>
       </div>
-      <h3>TP 6</h3>
-      <a href="portfolio/tp/tp_6/index.html" class="card-button">ACCÉDER</a>
     </div>
+  </footer>
 
-  </section>
+  <button class="scroll-top" aria-label="Retour en haut">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
