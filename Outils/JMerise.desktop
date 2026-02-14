@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=JMerise
-Comment=Modélisation Merise
-Exec=java -jar /opt/jmerise/JMerise.jar
-Icon=java
-Terminal=false
-Categories=Development;
