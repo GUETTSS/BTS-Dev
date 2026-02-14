@@ -1,0 +1,5 @@
+- Pas d’IA qui décide à la place de l’utilisateur
+- Pas de décisions médicales, juridiques, financières
+- Pas de réseau social
+- Pas de collaboration multi-utilisateurs
+- Pas de gamification au MVP
