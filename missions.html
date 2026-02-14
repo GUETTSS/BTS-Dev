@@ -1,61 +1,329 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mes Missions</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    body { background-color: black; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Missions Professionnelles - Portfolio BTS SIO IMAD">
+  <title>Missions - IMAD Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/projects.css">
 </head>
 <body>
-
-    <a href="index.html?skipLoader=true" class="back-arrow" title="Retour au sommaire">🡐</a>
-
-  <header class="main-header">
-    <h1 class="arcade-blink">MES MISSIONS</h1>
-  </header>
-
-  <section class="card-grid">
-
-    <!-- Mission 1 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/image.png"Mission 1" />
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader__content">
+      <div class="loader__logo">IMAD</div>
+      <div class="loader__bar">
+        <div class="loader__progress"></div>
       </div>
-      <h3>Mission 1</h3>
-      <a href="portfolio/missions/tp_7/index.html" class="card-button">ACCÉDER</a>
     </div>
+  </div>
 
-    <!-- Mission 2 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/image copy.png" alt="Mission 2" />
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo"><span>IMAD</span></a>
+      <ul class="navbar__menu">
+        <li><a href="index.html" class="navbar__link">Accueil</a></li>
+        <li><a href="about.html" class="navbar__link">A propos</a></li>
+        <li><a href="skills.html" class="navbar__link">Competences</a></li>
+        <li><a href="projects.html" class="navbar__link active">Projets</a></li>
+        <li><a href="veille.html" class="navbar__link">Veille</a></li>
+        <li><a href="certifications.html" class="navbar__link">Certifications</a></li>
+        <li><a href="contact.html" class="navbar__link">Contact</a></li>
+      </ul>
+      <button class="navbar__toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <header class="page-header">
+      <div class="container">
+        <a href="projects.html" class="btn btn--ghost reveal" style="margin-bottom: var(--space-4);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Retour aux projets
+        </a>
+        <h1 class="page-header__title reveal">Mes <span class="text-gradient">Missions</span></h1>
+        <p class="page-header__description reveal stagger-1">
+          Projets avances realises en formation - JavaScript, SQL et developpement web
+        </p>
       </div>
-      <h3>Mission 2</h3>
-      <a href="portfolio/missions/tp_8/index.html" class="card-button">ACCÉDER</a>
-    </div>
+    </header>
 
-    <!-- Mission 3 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/image copy 2.png" alt="Mission 3" />
+    <!-- Filter Bar -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="javascript">JavaScript</button>
+          <button class="filter-btn" data-filter="sql">SQL</button>
+          <button class="filter-btn" data-filter="html">HTML/CSS</button>
+        </div>
       </div>
-      <h3>Mission 3</h3>
-      <a href="portfolio/missions/tp_9/index.html" class="card-button">ACCÉDER</a>
-    </div>
+    </section>
 
-    <!-- Mission 4 -->
-    <div class="card">
-      <div class="card-image">
-        <img src="portfolio/images/image copy 3.png" alt="Mission 4" />
+    <!-- Missions Cards Grid -->
+    <section class="projects-section">
+      <div class="container">
+        <div class="projects-grid">
+
+          <!-- Mission 7 - Formulaire avance -->
+          <article class="project-card-interactive card-reveal reveal"
+                   data-category="html"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/image copy 6.png"
+                   data-title="Mission 7 - Formulaire avance"
+                   data-description="Formulaire d'inscription complet avec tous les types d'inputs HTML5."
+                   data-full-description="Realisation d'un formulaire d'inscription avance utilisant l'ensemble des elements de formulaire HTML5 : champs texte, email, password, telephone, date, time, color, range, file upload, select multiple, datalist, et plus encore. Implementation des validations HTML5 natives et personnalisation complete avec CSS3."
+                   data-technologies="HTML5,CSS3,Formulaire"
+                   data-duration="4 heures"
+                   data-context="BTS SIO - Mission"
+                   data-link="portfolio/missions/tp_7/index.html">
+            <div class="card-media">
+              <img src="portfolio/images/image copy 6.png" alt="Mission 7 - Formulaire" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #1e90ff, #003366)'">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge">HTML5</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Mission 7 - Formulaire avance</h3>
+              <p class="card-description">
+                Formulaire d'inscription complet avec tous les types d'inputs HTML5 : texte, password, file, select, checkbox, radio, date, range, color, etc.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">HTML5</span>
+                <span class="tag tag--pink">CSS3</span>
+                <span class="tag">Formulaire</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  4h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Mission
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mission 8 - Calculatrice JS -->
+          <article class="project-card-interactive card-reveal reveal stagger-1"
+                   data-category="javascript"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/image copy 7.png"
+                   data-title="Mission 8 - Calculatrice JavaScript"
+                   data-description="Calculatrice fonctionnelle en JavaScript avec operations arithmetiques."
+                   data-full-description="Developpement d'une calculatrice complete en JavaScript vanilla. Fonctionnalites implementees : operations arithmetiques de base (addition, soustraction, multiplication, division), test de parite des nombres, fonction de permutation de valeurs, gestion des erreurs (division par zero), et interface utilisateur intuitive avec affichage dynamique des resultats."
+                   data-technologies="JavaScript,HTML,CSS"
+                   data-duration="5 heures"
+                   data-context="BTS SIO - Mission"
+                   data-link="portfolio/missions/tp_8/index.html">
+            <div class="card-media">
+              <img src="portfolio/images/image copy 7.png" alt="Mission 8 - Calculatrice" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #F7DF1E, #333333)'">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge">JavaScript</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Mission 8 - Calculatrice JavaScript</h3>
+              <p class="card-description">
+                Calculatrice fonctionnelle en JavaScript avec operations arithmetiques, test de parite et fonction de permutation.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">JavaScript</span>
+                <span class="tag tag--pink">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  5h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Mission
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mission 9 - TP JavaScript -->
+          <article class="project-card-interactive card-reveal reveal stagger-2"
+                   data-category="javascript"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/ELu3Pler.jpeg"
+                   data-title="Mission 9 - Fonctions JavaScript"
+                   data-description="TP JavaScript avec plusieurs fonctions : calcul de moyenne, test d'age, affichage dynamique."
+                   data-full-description="Serie d'exercices JavaScript pour maitriser les fondamentaux du langage : fonction de calcul de moyenne de notes, validation d'age avec messages conditionnels, manipulation du DOM pour l'affichage dynamique nom/prenom, et changement interactif du fond d'ecran. Apprentissage des concepts de fonctions, conditions, boucles et evenements."
+                   data-technologies="JavaScript,DOM,Fonctions"
+                   data-duration="4 heures"
+                   data-context="BTS SIO - Mission"
+                   data-link="portfolio/missions/tp_9/index.html">
+            <div class="card-media">
+              <img src="portfolio/images/ELu3Pler.jpeg" alt="Mission 9 - JavaScript" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #F7DF1E, #000000)'">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge">JavaScript</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Mission 9 - Fonctions JavaScript</h3>
+              <p class="card-description">
+                TP JavaScript avec plusieurs fonctions : calcul de moyenne, test d'age, affichage nom/prenom et changement de fond d'ecran.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">JavaScript</span>
+                <span class="tag tag--pink">DOM</span>
+                <span class="tag">Fonctions</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  4h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Mission
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mission 10 - Base de donnees SQL (Featured) -->
+          <article class="project-card-interactive card-reveal reveal stagger-3"
+                   data-category="sql"
+                   data-modal="true"
+                   data-navigate="true"
+                   data-image="portfolio/images/image copy 5.png"
+                   data-title="Mission 10 - Base de donnees SQL"
+                   data-description="Conception et creation de bases de donnees SQL : Agence de location et Paris sportifs."
+                   data-full-description="Projet complet de conception et implementation de bases de donnees relationnelles. Deux cas pratiques realises : une agence de location de vehicules et une application de paris sportifs. Travail effectue : analyse des besoins, conception du MCD (Modele Conceptuel de Donnees), transformation en MLD (Modele Logique de Donnees), creation des tables SQL avec contraintes d'integrite, et ecriture de requetes complexes (jointures, sous-requetes, agregations)."
+                   data-technologies="SQL,MySQL,MCD/MLD,Modelisation"
+                   data-duration="8 heures"
+                   data-context="BTS SIO - Mission principale"
+                   data-link="portfolio/missions/tp_10/index.html"
+                   style="grid-column: span 2;">
+            <div class="card-media" style="height: 250px;">
+              <img src="portfolio/images/image copy 5.png" alt="Mission 10 - Base de donnees" loading="lazy" onerror="this.style.background='linear-gradient(135deg, #667eea, #764ba2)'" style="height: 100%; object-fit: cover;">
+              <div class="card-media-overlay"></div>
+              <span class="card-category-badge" style="background: var(--accent-magenta);">Mission Principale</span>
+            </div>
+            <div class="card-content">
+              <div style="display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-1) var(--space-3); background: hsla(266, 92%, 58%, 0.2); border-radius: var(--radius-full); font-size: var(--fs-xs); font-weight: var(--fw-semibold); color: var(--primary-light); margin-bottom: var(--space-3);">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                Projet phare
+              </div>
+              <h3 class="card-title" style="font-size: var(--fs-2xl);">Mission 10 - Base de donnees SQL</h3>
+              <p class="card-description" style="-webkit-line-clamp: 3;">
+                Conception et creation de bases de donnees SQL : Agence de location de vehicules et Application de paris sportifs. Modelisation complete (MCD/MLD) et scripts SQL.
+              </p>
+              <div class="card-tags">
+                <span class="tag tag--primary">SQL</span>
+                <span class="tag tag--pink">MySQL</span>
+                <span class="tag tag--magenta">MCD/MLD</span>
+                <span class="tag">Modelisation</span>
+              </div>
+              <div class="card-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  8h
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Mission principale
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </div>
-      <h3>Mission 4</h3>
-      <a href="portfolio/missions/tp_10/index.html" class="card-button">ACCÉDER</a>
-    </div>
+    </section>
+  </main>
 
-  </section>
+  <!-- Card Modal -->
+  <div class="card-modal-overlay"></div>
+  <div class="card-modal">
+    <button class="card-modal__close" aria-label="Fermer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <img class="card-modal__image" src="" alt="Apercu du projet">
+    <div class="card-modal__body">
+      <span class="card-modal__category"></span>
+      <h2 class="card-modal__title"></h2>
+      <p class="card-modal__description"></p>
+      <div class="card-modal__meta"></div>
+      <div class="card-modal__tags"></div>
+      <div class="card-modal__cta"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo"><span>IMAD</span></div>
+          <p class="footer__description">Etudiant en BTS SIO passionne par le developpement web.</p>
+          <div class="social-links">
+            <a href="https://github.com/guettss" target="_blank" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__title">Navigation</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">A propos</a></li>
+            <li><a href="skills.html">Competences</a></li>
+            <li><a href="projects.html">Projets</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h3 class="footer__title">Contact</h3>
+          <ul class="footer__links">
+            <li><a href="mailto:contact@example.com">Email</a></li>
+            <li><a href="https://github.com/guettss" target="_blank">GitHub</a></li>
+            <li><a href="contact.html">Formulaire</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 IMAD Portfolio - Tous droits reserves</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Retour en haut">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
