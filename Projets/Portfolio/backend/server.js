@@ -9,8 +9,8 @@ const fetch = require('node-fetch');
 const app = express();
 const PORT = 3000;
 
-// Votre clé API Claude (sécurisée côté serveur)
-const CLAUDE_API_KEY = 'process.env.ANTHROPIC_API_KEY';
+// Clé API Claude chargée depuis les variables d'environnement
+const CLAUDE_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 // Middleware
 app.use(cors()); // Permettre les requêtes depuis le frontend
